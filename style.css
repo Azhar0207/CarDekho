@@ -6,13 +6,15 @@
 }
 
 .navbar{
-    background-color: black;
+    /* background-color: black; */
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
 }
 
 .nav-logo{
     background-image: url(/images/carDekho-newLogo.svg);
+    height: 70px;
 }
