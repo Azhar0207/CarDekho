@@ -9,12 +9,18 @@
     /* background-color: black; */
     height: 70px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    color: black;
+    color: black;   
 }
 
 .nav-logo{
+    
     background-image: url(/images/carDekho-newLogo.svg);
     height: 70px;
+    width: 20%;
+    background-size: 60%;
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    background-position: center;
 }
