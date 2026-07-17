@@ -24,7 +24,7 @@
   padding-top: 20px;
 }
 .navbar .nav-logo .logo {
-  background-image: url("/CarDekho/images/carDekho-newLogo.svg");
+  background-image: url("./images/carDekho-newLogo.svg");
   height: 60px;
   width: 100%;
   background-repeat: no-repeat;
