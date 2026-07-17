@@ -174,7 +174,7 @@ textarea {
 .banner {
   height: 540px;
   width: 95%;
-  background-image: url("/images/hero1");
+  background-image: url("./images/hero1");
   background-size: 108% 100%;
   background-repeat: no-repeat;
   margin-left: 40px;
