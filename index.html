@@ -1,33 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>CarDekho</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="navbar">
-            <div class="nav-logo"></div>
-                <div class="nav-search">
-                    <select name="" id=""><option value="">All</option></select>
-                 <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-                 <input type="text" name="" id="" placeholder="Search or Ask Question">
-                </div>
-
-                 <div class="language">
-                <select name="" id=""><option value="">English</option></select>
-            </div>
-            <div class="icon"><i class="fa-regular fa-heart"></i></div>
-            <div class="login">
-                <i class="fa-regular fa-user"></i>
-                <a href="">Login/Register</a>
-            </div>
-            </div>
-            
+      <div class="navbar">
+        <div class="nav-logo">
+          <div class="logo"></div>
         </div>
+
+        <div class="nav-middle">
+          <div class="nav-search">
+            <div class="all">
+              <p>All <i class="fa-solid fa-sort-down"></i></p>
+            </div>
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                type="text"
+                placeholder="Search or Ask a Question"
+                class="search"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-right">
+          <div class="language">
+            English <i class="fa-solid fa-sort-down"></i>
+          </div>
+          <div class="favroite"><i class="fa-regular fa-heart"></i></div>
+          <div class="nav-login">
+            <i class="fa-regular fa-circle-user"></i> Login / Register
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-left">
+          <ul>
+            <li class="list">
+              <a href="">New Cars</a> <i class="fa-solid fa-sort-down"></i>
+            </li>
+            <li>
+              <a href="">Used Cars</a> <i class="fa-solid fa-sort-down"></i>
+            </li>
+            <li>
+              <a href="">News & Reviews</a>
+              <i class="fa-solid fa-sort-down"></i>
+            </li>
+            <li><a href="">Videos</a> <i class="fa-solid fa-sort-down"></i></li>
+          </ul>
+        </div>
+        <div class="panel-right">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Select City</p>
+          <i class="fa-solid fa-sort-down"></i>
+        </div>
+      </div>
     </header>
-</body>
+
+    <div class="banner">
+      <div class="hero"></div>
+
+      <div class="form">
+        <form action="/submit-form-endpoint" method="POST">
+          <div class="form-part">
+            <h1>Find your right car</h1>
+            <div class="form-div">
+              <p class="p1" id="new-car">
+                New Car <i class="fa-solid fa-caret-down"></i>
+              </p>
+
+              <p class="p1" id="used-car">Used Car</p>
+            </div>
+
+            <div class="select-radio">
+              <p class="radio">
+                <input
+                  type="radio"
+                  id="budget"
+                  name="contact-method"
+                  value="By Budget"
+                  checked
+                />
+                <label for="Budget" id="label-budget">By Budget</label><br />
+              </p>
+              <p>
+                <input
+                  type="radio"
+                  id="brand"
+                  name="contact-method"
+                  value=" By Brand"
+                />
+                <label for="Brand" id="label-brand">By Brand</label>
+              </p>
+            </div>
+
+            <div class="select-container">
+              <select name="Select-Budget" id="select-budget">
+                <option value="" disabled selected>Select Budget</option>
+                <option value="">1 - 5 Lakh</option>
+                <option value="">5 - 10 Lakh</option>
+                <option value="">10 - 15 Lakh</option>
+                <option value="">15 - 20 Lakh</option>
+                <option value="">20 - 35 Lakh</option>
+                <option value="">35 - 50 Lakh</option>
+                <option value="">50 Lakh - 1 Crore</option>
+                <option value="">Above 1 Crore</option>
+              </select>
+
+              <select name="Select-Brand" id="select-brand">
+                <option value="" disabled selected>All Vehicle Type</option>
+                <option value="">Hatchback</option>
+                <option value="">Sedan</option>
+                <option value="">SUV</option>
+                <option value="">MUV</option>
+                <option value="">Luxury</option>
+                <option value="">Super Luxury</option>
+                <option value="">Convertible</option>
+                <option value="">Hybrid</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-button">Search</button>
+
+            <p class="form-search">
+              Advanced Search <i class="fa-solid fa-arrow-right"></i>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="car-card"></div>
+  </body>
 </html>

@@ -1,26 +1,319 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: lato;
 }
 
-.navbar{
-    /* background-color: black; */
-    height: 70px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    color: black;   
+/** ================================== logo ============================== **/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 0.5px solid #a5a5a5;
+  height: 60px;
+  padding: 5px 100px;
+}
+.navbar .nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 20%;
+  padding-top: 20px;
+}
+.navbar .nav-logo .logo {
+  background-image: url("/images/carDekho-newLogo.svg");
+  height: 60px;
+  width: 100%;
+  background-repeat: no-repeat;
 }
 
-.nav-logo{
-    
-    background-image: url(/images/carDekho-newLogo.svg);
-    height: 70px;
-    width: 20%;
-    background-size: 60%;
-    /* background-size: contain; */
-    background-repeat: no-repeat;
-    background-position: center;
+/** ================================= Search ============================ **/
+.navbar .nav-middle {
+  width: 50%;
 }
+.navbar .nav-search {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 70%;
+  border: 1px solid #a5a5a5;
+  border-radius: 18px;
+  padding: 0px 20px;
+}
+
+/** ================================== arrow down ================================= **/
+
+.navbar .nav-search .fa-sort-down {
+  color: #a5a5a5;
+  font-size: 10px;
+  margin-left: 10px;
+  margin-top: -20px;
+}
+
+.navbar .search-box .fa-magnifying-glass {
+  border-left: 1px solid #a5a5a5;
+  margin-left: 20px;
+  margin-right: 10px;
+  padding-left: 20px;
+}
+
+.navbar .search-box .search {
+  border: none;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+input:focus {
+  outline: none;
+}
+input,
+textarea {
+  caret-color: #ff4757; /* Accepts Hex, RGB, HSL, or named colors */
+}
+
+/** ====================================== Language / Login ============================= **/
+
+.nav-right {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50px;
+  width: 30%;
+}
+
+.nav-right .fa-sort-down {
+  color: #2a2d32;
+  font-size: 10px;
+  padding-left: 2px;
+  margin-top: -20px;
+}
+
+.nav-right .language {
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+/** ======================================= Navbar Ends ================================== **/
+
+/** ======================================= Panel ======================================= **/
+
+/** ======================== left Panel ======================================**/
+
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 60px;
+  padding: 0px 60px;
+}
+
+.panel .panel-left {
+  width: 40%;
+  height: 50px;
+}
+.panel .panel-left ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 13px;
+}
+.panel .panel-left ul li {
+  list-style: none;
+}
+
+.panel .panel-left ul li a {
+  text-decoration: none;
+  color: #2a2d32;
+  font-weight: 700;
+}
+.panel .panel-left ul li a:hover {
+  border-top: 3px solid #f75d34;
+  margin-top: 200px;
+}
+
+.panel .panel-left .fa-sort-down {
+  color: #2a2d32;
+  font-size: 10px;
+  padding-left: 2px;
+  margin-top: -200px;
+}
+
+/** ================================= Right Panel ============================ **/
+
+.panel .panel-right {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 50px;
+  width: 60%;
+  padding-right: 80px;
+}
+
+.panel .panel-right .fa-sort-down {
+  color: #919395;
+  font-size: 8px;
+  padding-left: 2px;
+  margin-top: -2px;
+}
+.panel .panel-right p {
+  color: #919395;
+}
+
+.panel .panel-right .fa-location-dot {
+  color: #919395;
+}
+
+/** ====================================== Header Ends =============================== **/
+
+/** ====================================== Banner Starts =============================== **/
+
+.banner {
+  height: 540px;
+  width: 95%;
+  background-image: url("/images/hero1");
+  background-size: 108% 100%;
+  background-repeat: no-repeat;
+  margin-left: 40px;
+  display: inline-block;
+}
+
+/** ==================================== Form ======================================== **/
+
+.banner .form {
+  height: 420px;
+  width: 350px;
+  background-color: #fff;
+  margin-left: 75px;
+  margin-top: 60px;
+  border-radius: 20px;
+  display: flex;
+}
+
+.form H1 {
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.form .form-part {
+  margin-left: 30px;
+  width: 100%;
+}
+
+.form .form-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* background-color: red; */
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-right: -20px;
+}
+
+.form .p1 {
+  border: 1px solid black;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  /* margin-bottom: 20px; */
+}
+
+.form #new-car {
+  color: #fff;
+  background-color: #24272c;
+  height: 50px;
+  width: 70%;
+  padding-left: 12%;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.form #used-car {
+  color: #000;
+  background-color: #fff;
+  height: 50px;
+  width: 70%;
+  padding-left: 12%;
+  border-radius: 10px;
+}
+
+.form .form-div .fa-caret-down {
+  color: #24272c;
+  margin-top: 56px;
+  margin-left: -40px;
+}
+
+/** ============================= Radio Button ==============================**/
+
+.form .select-radio {
+  display: flex;
+}
+
+.form .select-radio #label-budget {
+  color: #f75d34;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.form .select-radio #budget {
+  border-color: #f75d34;
+}
+
+.form .select-radio #label-brand {
+  color: #777a7d;
+  font-weight: 600;
+  padding: 10px;
+}
+
+/**============================== Radio End ===================================== **/
+
+/** =============================== select-container ============================== **/
+
+.select-container #select-budget {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid #777a7d;
+  border-radius: 10px 10px 0 0;
+}
+
+.select-container #select-brand {
+  height: 50px;
+  width: 100%;
+  margin-top: -1px;
+  border: 1px solid #777a7d;
+  border-radius: 0 0 10px 10px;
+}
+
+.form .form-part .submit-button {
+  margin-top: 20px;
+  height: 50px;
+  width: 100%;
+  background-color: #f75d34;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+
+.form .form-part .form-search {
+  font-size: 12px;
+  font-weight: bold;
+  color: #96979a;
+  display: flex;
+  justify-content: end;
+  margin-top: 30px;
+}
+
+.form .form-part .form-search .fa-arrow-right {
+  margin-top: 3px;
+  margin-left: 5px;
+  font-size: 8px;
+}
+
+/** ==================================== Form Ends ============================= **/
